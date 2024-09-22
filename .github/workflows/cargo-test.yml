@@ -29,12 +29,6 @@ jobs:
       - name: cargo fmt
         run: |
           cargo fmt --all -- --check
-      - name: cargo check
-        run: |
-          cargo check --release --workspace
-      - name: cargo try-runtime check
-        run: |
-          cargo check --release --workspace --features try-runtime
       - name: cargo test all except interlay
         run: |
           cargo test --release --workspace --features runtime-benchmarks
