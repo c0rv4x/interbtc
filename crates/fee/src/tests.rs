@@ -1,5 +1,5 @@
 use super::*;
-use crate::{mock::*, Commission, IssueFee};
+use crate::{mock::*, Commission, IssueFee, UnsignedFixedPoint}; // Explicitly import UnsignedFixedPoint from crate
 use currency::Amount;
 use frame_support::{assert_noop, assert_ok, dispatch::DispatchResultWithPostInfo};
 use primitives::VaultId;
