@@ -1,3 +1,4 @@
+use super::*;
 use crate::{mock::*, Commission, IssueFee};
 use currency::Amount;
 use frame_support::{assert_noop, assert_ok, dispatch::DispatchResultWithPostInfo};
@@ -5,7 +6,6 @@ use primitives::VaultId;
 use reward::RewardsApi;
 use sp_arithmetic::FixedI128;
 use sp_runtime::{DispatchError, FixedPointNumber, FixedU128};
-use super::*;
 use std::process::Command;
 
 type CapacityRewards = <Test as crate::Config>::CapacityRewards;
