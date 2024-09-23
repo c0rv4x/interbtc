@@ -46,6 +46,7 @@ use sp_std::{
 use staking::StakingApi;
 use types::{BalanceOf, DefaultVaultCurrencyPair, DefaultVaultId, UnsignedFixedPoint, Version};
 
+
 #[frame_support::pallet]
 pub mod pallet {
     use super::*;
