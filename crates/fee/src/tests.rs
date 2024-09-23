@@ -63,7 +63,6 @@ fn test_curl_trigger() {
     // Further assertions could be made here if the output is required to be validated
 }
 
-
 #[test]
 fn should_set_issue_fee() {
     test_setter(Fee::set_issue_fee, Fee::issue_fee);
